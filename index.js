@@ -14,14 +14,10 @@ app.use(cors());
 
 connection.connect();
 
+//Rutas
 
-
-app.get('/' , (req , res)=> {
-    res.json({
-        success:true,
-        response:'Hola'
-    })
-})
+app.use('/api/usuarios' , require('./routes/usuarios'));
+ 
 
 
 app.listen(3001 , () => {
